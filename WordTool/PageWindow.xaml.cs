@@ -243,16 +243,31 @@ namespace WordTool
             {
                 case ModelEnum.Default:
                     wordInfo = wordInfo == null ? this.wordRepository.GetOne() : wordInfo;
+                    if (wordInfo == null)
+                    {
+                        MessageBox.Show("resource is null, please import resource.");
+                        return;
+                    }
                     this.Word.Content = wordInfo.Word;
                     wordInfo.TrascationFlag = false;
                     break;
                 case ModelEnum.Changed:
                     wordInfo = wordInfo == null ? this.wordRepository.GetOne() : wordInfo;
+                    if (wordInfo == null)
+                    {
+                        MessageBox.Show("resource is null, please import resource.");
+                        return;
+                    }
                     this.Word.Content = wordInfo.Trascation;
                     wordInfo.TrascationFlag = false;
                     break;
                 case ModelEnum.Mixed:
                     wordInfo = wordInfo == null ? this.wordRepository.GetOne() : wordInfo;
+                    if (wordInfo == null)
+                    {
+                        MessageBox.Show("resource is null, please import resource.");
+                        return;
+                    }
                     Random rd = new Random();
                     var number = rd.Next(1000, 10000);
                     if (number % 2 == 0)
@@ -268,11 +283,21 @@ namespace WordTool
                     break;
                 case ModelEnum.Revised:
                     wordInfo = wordInfo == null ? this.wordRepository.GetReadedOne() : wordInfo;
+                    if (wordInfo == null)
+                    {
+                        MessageBox.Show("resource is null, please import resource.");
+                        return;
+                    }
                     this.Word.Content = wordInfo.Word;
                     wordInfo.TrascationFlag = false;
                     break;
                 case ModelEnum.RevisedChange:
                     wordInfo = wordInfo == null ? this.wordRepository.GetReadedOne() : wordInfo;
+                    if (wordInfo == null)
+                    {
+                        MessageBox.Show("resource is null, please import resource.");
+                        return;
+                    }
                     this.Word.Content = wordInfo.Trascation;
                     wordInfo.TrascationFlag = false;
                     break;

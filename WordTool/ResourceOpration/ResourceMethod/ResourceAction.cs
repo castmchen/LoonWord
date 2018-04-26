@@ -11,6 +11,7 @@ namespace WordTool
     public class ResourceAction
     {
         private static readonly string tableMappingResourceUrl = System.Windows.Forms.Application.StartupPath.Substring(0, System.Windows.Forms.Application.StartupPath.IndexOf("\\bin")) + "\\ResourceOpration\\Resource\\CustomResource.resx";
+        //private static readonly string tableMappingResourceUrl = System.Windows.Forms.Application.StartupPath + "\\OtherResource.resx";
 
         public static void RemoveAndAddNewResEntry(string resFileName, string key, string value)
         {

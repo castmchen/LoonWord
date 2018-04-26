@@ -29,7 +29,8 @@ namespace WordTool
     public partial class MainWindow : Window
     {
 
-        private static readonly string historyResourceUrl = System.Windows.Forms.Application.StartupPath.Substring(0, System.Windows.Forms.Application.StartupPath.IndexOf("\\bin")) + "\\ResourceOpration\\Resource\\OtherResource.resx";
+        private static readonly string historyResourceUrl = System.Windows.Forms.Application.StartupPath.Substring(0, System.Windows.Forms.Application.StartupPath.IndexOf("\\bin")) + "\\ResourceOpration\\Resource\\CustomResource.resx";
+        //private static readonly string historyResourceUrl = System.Windows.Forms.Application.StartupPath + "\\CustomResource.resx";
         private static readonly string ChineseRule = @"[\u4e00-\u9fa5]";
         private static readonly string JapaneseRule = @"[\u0800-\u4e00]";
         private static readonly int historyCount = 7;
@@ -224,8 +225,14 @@ namespace WordTool
             //window.Show();
 
             var seletedOne = this.DropDownList.SelectedValue as LanguageDomain;
-            this.TableName = mappingDic[seletedOne.Name]; 
-
+            this.TableName = mappingDic[seletedOne.Name];
+            this.wordRepository = new WordRepository(this.TableName);
+            var wordInfo = this.wordRepository.GetOne();
+            if (wordInfo == null)
+            {
+                MessageBox.Show("resource is null, please import resource.");
+                return;
+            }
             PageWindow pageWindow = new PageWindow(this.TableName);
             pageWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             //pageWindow.Left =200;

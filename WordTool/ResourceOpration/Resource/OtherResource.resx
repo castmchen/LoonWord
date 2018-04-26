@@ -117,37 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Key_你好" xml:space="preserve">
-    <value>Hello</value>
-  </data>
-  <data name="Key_大家好" xml:space="preserve">
-    <value>Hello everyone</value>
-  </data>
-  <data name="Key_你叫什么" xml:space="preserve">
-    <value>What do you call</value>
-  </data>
-  <data name="Key_名字" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="Key_爱" xml:space="preserve">
-    <value>love</value>
-  </data>
-  <data name="Key_我爱你" xml:space="preserve">
-    <value>I love you!</value>
-  </data>
-  <data name="Key_我想你" xml:space="preserve">
-    <value>I miss you</value>
-  </data>
-  <data name="Key_I" xml:space="preserve">
-    <value>我</value>
-  </data>
-  <data name="Key_北京" xml:space="preserve">
-    <value>Beijing</value>
-  </data>
-  <data name="Key_azure" xml:space="preserve">
-    <value>蔚蓝</value>
-  </data>
-  <data name="Key_刚刚" xml:space="preserve">
-    <value>just</value>
-  </data>
 </root>

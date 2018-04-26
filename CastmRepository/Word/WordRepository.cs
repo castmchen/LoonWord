@@ -57,7 +57,7 @@ namespace CastmRepository
                 var paramArray = this.ConvertParamsToArray(word);
                 var dataSet = SqliteRepository.ExecuteDataSet(query, paramArray);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -192,8 +192,16 @@ namespace CastmRepository
         public void UpdateVoiceById(Guid id, string voiceStr, string ph)
         {
             ph.Replace("'", "''");
-            var query = $"update {this.TableName} set Voice = '{voiceStr}', Phonetic = '{ph}' where Id = '{id.ToString()}' ";
-            var dataSet = SqliteRepository.ExecuteDataSet(query, null);
+            try
+            {
+                var query = $"update {this.TableName} set Voice = '{voiceStr}', Phonetic = '{ph}' where Id = '{id.ToString()}' ";
+                var dataSet = SqliteRepository.ExecuteDataSet(query, null);
+            }
+            catch (Exception)
+            {
+                var query = $"update {this.TableName} set Voice = '{voiceStr}' where Id = '{id.ToString()}' ";
+                var dataSet = SqliteRepository.ExecuteDataSet(query, null);
+            }
         }
 
         public void ResetFlag()
