@@ -191,7 +191,10 @@ namespace CastmRepository
 
         public void UpdateVoiceById(Guid id, string voiceStr, string ph)
         {
-            ph.Replace("'", "''");
+            if (!string.IsNullOrEmpty(ph))
+            {
+                ph.Replace("'", "''");
+            }
             try
             {
                 var query = $"update {this.TableName} set Voice = '{voiceStr}', Phonetic = '{ph}' where Id = '{id.ToString()}' ";

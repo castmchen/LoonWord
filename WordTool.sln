@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTool", "WordTool\WordTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinShanSDK", "JinShanSDK\JinShanSDK.csproj", "{1C28470A-4FD9-4355-ACD7-F268AF9028D4}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{464D569E-A35C-4540-B150-E7910A6A66AC}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LoonWord", "LoonWord\LoonWord.vdproj", "{D11EDC0E-CFDC-4FDE-B83C-5797B8209539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,8 +41,8 @@ Global
 		{1C28470A-4FD9-4355-ACD7-F268AF9028D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C28470A-4FD9-4355-ACD7-F268AF9028D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C28470A-4FD9-4355-ACD7-F268AF9028D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{464D569E-A35C-4540-B150-E7910A6A66AC}.Debug|Any CPU.ActiveCfg = Debug
-		{464D569E-A35C-4540-B150-E7910A6A66AC}.Release|Any CPU.ActiveCfg = Release
+		{D11EDC0E-CFDC-4FDE-B83C-5797B8209539}.Debug|Any CPU.ActiveCfg = Debug
+		{D11EDC0E-CFDC-4FDE-B83C-5797B8209539}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

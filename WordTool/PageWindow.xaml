@@ -79,19 +79,20 @@
         </Grid.Background>
 
         <Label Content="note: 'BACK' => back to previous page, 'RADIOS' => select a study model, 'DROPDOWNLIST' => select how many words a group." HorizontalAlignment="Left" Margin="42,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.5,0.8" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe Script" Foreground="#CC3333"/>
-        <Border HorizontalAlignment="Left" Height="190" Margin="39,125,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#CD853F" BorderThickness="2" CornerRadius="20,20,20,20" >
+        <Border HorizontalAlignment="Left" Height="220" Margin="39,125,0,0" VerticalAlignment="Top" Width="196" BorderBrush="#CD853F" BorderThickness="2" CornerRadius="20,20,20,20" >
+            <Button Click="Rest_Click" Style="{StaticResource CommonButton}" Content="REST" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="22" Margin="18.4,178.4,0,0"/>
 
             <!--<RadioButton Click="RadioButton_CheckRevise" x:Name="Revise" Content="Revise" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" Foreground="#CCCC00" FontFamily="Segoe Script" Margin="132.4,61.4,0,0"/>-->
         </Border>
-        <Button Click="Back_Click" Style="{StaticResource CommonButton}" Content="BACK" HorizontalAlignment="Left" Margin="60,145,0,0" VerticalAlignment="Top" Width="148" Height="20" />
+        <Button Click="Back_Click" Style="{StaticResource CommonButton}" Content="BACK" HorizontalAlignment="Left" Margin="60,141,0,0" VerticalAlignment="Top" Width="148" Height="24" />
         <!--<RadioButton Click="RadioButton_CheckDefault" x:Name="DefaultModel" Content="Default" HorizontalAlignment="Left" Margin="43,188,0,0" VerticalAlignment="Top" IsChecked="True" FontWeight="Bold" Foreground="#CCCC00" FontFamily="Segoe Script"/>-->
         <!--<RadioButton Click="RadioButton_CheckMixed" x:Name="MixedModel" Content="Mixed" HorizontalAlignment="Left" Margin="113,188,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#CCCC00" FontFamily="Segoe Script"/>-->
         <ComboBox x:Name="DropDownList_Model" Style="{StaticResource ComboBoxTest2}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="148" SelectionChanged="comboBoxInWnd_SelectionChanged_Model"
                 DisplayMemberPath="Value" 
-                ItemsSource="{Binding ModelListForDropdownList, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PageWindow}}}" Margin="60,186,0,512.8" FontFamily="Segoe Script" FontWeight="Bold" FontStyle="Italic" Foreground="#999933" Height="22" BorderBrush="#FFCCCC00"/>
+                ItemsSource="{Binding ModelListForDropdownList, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PageWindow}}}" Margin="60,183,0,510.8" FontFamily="Segoe Script" FontWeight="Bold" FontStyle="Italic" Foreground="#999933" Height="27" BorderBrush="#FFCCCC00"/>
         <ComboBox x:Name="DropDownList" Style="{StaticResource ComboBoxTest2}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="148" SelectionChanged="comboBoxInWnd_SelectionChanged"
                       DisplayMemberPath="Name" 
-                      ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PageWindow}}, Path=GroupListForDropdownList}" Margin="60,223,0,475.8" FontFamily="Segoe Script" FontWeight="Bold" FontStyle="Italic" Foreground="#999933" Height="22" BorderBrush="#FFCCCC00"/>
+                      ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:PageWindow}}, Path=GroupListForDropdownList}" Margin="60,223,0,471.8" FontFamily="Segoe Script" FontWeight="Bold" FontStyle="Italic" Foreground="#999933" Height="27" BorderBrush="#FFCCCC00"/>
         <Button Click="Submit_Click" Style="{StaticResource CommonButton}" Content="SUBMIT" HorizontalAlignment="Left" Margin="60,265,0,0" VerticalAlignment="Top" Width="148" Height="22"/>
 
         <Border HorizontalAlignment="Left" Height="395" Margin="250,125,0,0" VerticalAlignment="Top" Width="490" BorderBrush="#CD853F" BorderThickness="2" CornerRadius="20,20,20,20" >
@@ -128,7 +129,7 @@
         <Button Click="Tip_Click" Content="TIP" Style="{StaticResource CommonButton}" Margin="504,337,310.6,354.8" RenderTransformOrigin="0.85,0.4" Width="Auto" Height="Auto"/>
         <Image MouseLeftButtonDown="GoBack" Source="Img/back.png" Margin="461,336,408.6,356.8"/>
         <Label x:Name="EveryDay" Content="" Margin="375,437,158.6,215.8" FontFamily="Segoe Script" FontWeight="Bold" FontStyle="Italic" Foreground="#FFFF9000" FontSize="12"/>
-        <Image gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="/Img/timg3.gif" HorizontalAlignment="Left" Height="170" Margin="53,344,0,0" VerticalAlignment="Top" Width="166"/>
+        <Image gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="/Img/timg3.gif" HorizontalAlignment="Left" Height="170" Margin="53,350,0,0" VerticalAlignment="Top" Width="166"/>
         <Image x:Name="SentencePic" HorizontalAlignment="Left" Height="51" Margin="267,464,0,0" VerticalAlignment="Top" Width="94"/>
     </Grid>
 </Window>

@@ -15,7 +15,9 @@ namespace CastmRepository
     /// </summary>
     public class SqliteRepository
     {
-        private static readonly string connectionString = "Data Source = Loon.sqlite; Version=3;";
+        //private static readonly string connectionString = "Data Source = Loon.sqlite; Version=3;";System.Windows.Forms.Application.StartupPath.
+
+        private static readonly string connectionString = string.Format("Data Source = {0}\\Loon.sqlite; Version=3;", System.Windows.Forms.Application.StartupPath);
 
         /// <summary>
         /// Creates a new <see cref="SqliteRepository"/> instance. The ctor is marked private since all members are static.
